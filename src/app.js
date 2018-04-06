@@ -1,10 +1,37 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+import Navbar from './components/common/Navbar';
+import FlashMessages from './components/common/FlashMessages';
+
+import Register from './components/auth/Register';
+import Login from './components/auth/Login';
+
+import ChallengeIndex from './components/challenges/ChallengeIndex';
+import ChallengeSubmit from './components/challenges/ChallengeSubmit';
+import Help from './components/info/Help';
+
+
+import 'bulma';
+
 class App extends React.Component {
   render() {
     return (
-      <h1>WDI32 Project 4</h1>
+      <BrowserRouter>
+        <main>
+          <Navbar />
+          <FlashMessages />
+          <Switch>
+            <Route path="/challenge/submit" component={ChallengeSubmit} />
+            <Route path="/challenge" component={ChallengeIndex} />
+            <Route path="/register" component={Register} />
+            <Route path="/login" component={Login} />
+            <Route path="/help" component={Help} />
+          </Switch>
+        </main>
+      </BrowserRouter>
     );
   }
 }
