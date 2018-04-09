@@ -1,0 +1,60 @@
+*{
+  background-color: #efefef;
+  font-family: 'Fredericka the Great', cursive;
+
+  .container{
+    height:100vh;
+  }
+
+  form, label, .field, .control{
+    background-color: white;
+  }
+  .login-box{
+    border: 1px solid #d0cece;
+    width:50vw;
+    padding: 5%;
+    margin-left: 23%;
+    margin-top: -83vh;
+    background-color: white;
+
+    .login-title{
+      background-color: white;
+      text-align: center;
+      font-size: 3vw;
+      margin-top: -3vh;
+    }
+    button{
+      background-color:#f1eded;
+      margin-left: 42%;
+      margin-top: 5%;
+      margin-bottom: -5%;
+    }
+  }
+  .register-box{
+    border: 1px solid #d0cece;
+    width:65vw;
+    padding: 5%;
+    margin-left: 16.5%;
+    margin-top: -90vh;
+    background-color: white;
+
+    .register-title{
+      background-color: white;
+      font-size: 3vw;
+      text-align: center;
+      margin-top: -4vh;
+    }
+  }
+  .medium-controls{
+    background-color: white;
+    display: inline-flex;
+    .field{
+      margin-left: 6vw;
+    }
+  }
+  button.button{
+    background-color:#f1eded;
+    margin-left: 24.5vw;
+    margin-top: 2%;
+  }
+}

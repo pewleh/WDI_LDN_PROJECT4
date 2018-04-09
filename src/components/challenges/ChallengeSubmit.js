@@ -29,7 +29,7 @@ class ChallengeSubmit extends React.Component {
       headers: { Authorization: `Bearer ${Auth.getToken()}`}
     })
       .then(() => Flash.setMessages('success', 'Succesfully Created a baannger!'))
-      .then(() => this.props.history.push('/bangers'))
+      .then(() => this.props.history.push('/gallery/index'))
       .catch(err => this.setState({ errors: err.response.data.errors}));
   }
 
