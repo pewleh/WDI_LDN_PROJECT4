@@ -6,8 +6,8 @@ const challengeSchema = new mongoose.Schema({
   description: { type: String, required: true },
   likes: [{type: mongoose.Schema.ObjectId, ref: 'User'}],
   challenge: {type: mongoose.Schema.ObjectId, ref: 'Challenge'},
-  startTime: {type: Number, required: true},
-  endTime: {type: Number, required: true}
+  startTime: {type: String, required: true},
+  endTime: {type: String, required: true}
 });
 
 module.exports = mongoose.model('Challenge', challengeSchema);

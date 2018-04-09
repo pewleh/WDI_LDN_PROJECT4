@@ -9,27 +9,30 @@ class ChallengeIndex extends React.Component{
   }
 
   componentDidMount() {
-    axios.get('/challenges')
+    axios.get('/api/challenges')
       .then(res => this.setState({ challenges: res.data }, () => console.log(this.state)));
   }
 
   handleChange = (e) => {
     console.log(e.target.value);
-    this.setState({ search: e.target.value}, () => console.log(this.state));
+    this.setState({ search: e.target.value }, () => console.log(this.state));
   }
+
   render(){
     return(
-      <section className="challenge-index-container">
-        <h1>This weeks challenge...</h1>
-        <div className="updatable-data">
-          {/* image and description -> probably through an array and a timeout? */}
-        </div>
-        <div className="countdown-container">
-          {/* set up a countdown for 168 hours */}
-        </div>
-        <Link className="button" to={'/challenge/submit'}>Submit!</Link>
-        {/* ${this.props.match.params.id}  may need this  depending on how I go forward.*/}
-      </section>
+      <div className="container">
+        <section className="challengeIndex-container">
+          <h1 className="challenge-title">This weeks challenge...</h1>
+          <div className="updatable-data">
+            {/* image and description -> probably through an array and a timeout? */}
+          </div>
+          <div className="countdown-container">
+            {/* set up a countdown for 168 hours */}
+          </div>
+          <Link className="button" to={'/challenge/submit'}>Submit!</Link>
+          {/* ${this.props.match.params.id}  may need this  depending on how I go forward.*/}
+        </section>
+      </div>
     );
   }
 }

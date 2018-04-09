@@ -5,7 +5,7 @@ const artworkSchema = new mongoose.Schema({
   image: { type: String, pattern: /^https?:\/\/.+/},
   description: { type: String, required: true },
   likes: [{type: mongoose.Schema.ObjectId, ref: 'User'}],
-  challenge: {type: '', ref: 'Challenge'}
+  challenge: {type: mongoose.Schema.ObjectId, ref: 'Challenge'}
 
 
 });

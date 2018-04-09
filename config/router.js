@@ -6,12 +6,7 @@ const challenges = require('../controllers/challenges');
 const auth = require('../controllers/auth');
 const secureRoute = require('../lib/secureRoute');
 
-
-router.route('/')
-  .get(artworks.home);
-  
-
-router.route('/gallery')
+router.route('/artworks')
   .get(artworks.index)
   .post(secureRoute, artworks.create);
 
@@ -20,11 +15,11 @@ router.route('/artworks/:id')
   .put(secureRoute, artworks.update)
   .delete(secureRoute, artworks.delete);
 
-router.route('/challenge')
+router.route('/challenges')
   .get(challenges.index);
-router.route('/challenge/:id')
-  .get(challenges.show)
-  .put(secureRoute, challenges.create);
+
+router.route('/challenges/:id')
+  .get(challenges.show);
 
 router.route('/register')
   .post(auth.register);

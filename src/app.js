@@ -12,8 +12,8 @@ import Login from './components/auth/Login';
 import ChallengeIndex from './components/challenges/ChallengeIndex';
 import ChallengeSubmit from './components/challenges/ChallengeSubmit';
 
-import GalleryIndex from './components/submissions/GalleryIndex';
-import GalleryShow from './components/submissions/GalleryShow';
+import GalleryIndex from './components/artworks/GalleryIndex';
+import GalleryShow from './components/artworks/GalleryShow';
 import Help from './components/info/Help';
 import Profile from './components/info/User';
 
@@ -30,7 +30,7 @@ class App extends React.Component {
           <FlashMessages />
           <Switch>
             <Route path="/challenge/submit" component={ChallengeSubmit} />
-            <Route path="/gallery/show" component={GalleryShow} />
+            <Route path="/gallery/:id" component={GalleryShow} />
             <Route path="/challenge" component={ChallengeIndex} />
             <Route path="/gallery" component={GalleryIndex} />
             <Route path="/register" component={Register} />

@@ -7,7 +7,7 @@ const Form = ({handleSubmit, handleChange, data}) => {
         <label htmlFor="name">Challenge Name</label>
         <input
           className="input"
-          placeholder="Name"
+          placeholder="Challenge Name"
           name="name"
           onChange={handleChange}
           value={data.name}
@@ -17,7 +17,7 @@ const Form = ({handleSubmit, handleChange, data}) => {
         <label htmlFor="name">Image</label>
         <input
           className="input"
-          placeholder="Use a html link here!"
+          placeholder="Use a http link here!"
           name="image"
           onChange={handleChange}
           value={data.image}
@@ -26,81 +26,83 @@ const Form = ({handleSubmit, handleChange, data}) => {
       <div className="field">
         <label htmlFor="name">Description</label>
         <input
-          className="input"
+          className="input description-input"
           placeholder="Description"
           name="description"
           onChange={handleChange}
           value={data.description}
         />
       </div>
-      <div className="field">
-        <label htmlFor="name">First Medium</label>
-        <div className="control">
-          <div className="select">
-            <select name="rating">
-              <option selected disabled value="">Please choose</option>
-              <option value="acrylic">Acrylics</option>
-              <option value="charcoal">Charcoal</option>
-              <option value="chalk">Chalk</option>
-              <option value="digital">Digital</option>
-              <option value="ink">Ink</option>
-              <option value="mixed-media">Mixed Media</option>
-              <option value="oil">Oils</option>
-              <option value="pencil">Pencil</option>
-              <option value="pastel">Pastel</option>
-              <option value="watercolour">Watercolour</option>
-              <option value="spray-paint">Spray Paint</option>
-            </select>
+      <div className="medium-controls">
+        <div className="field">
+          <label htmlFor="name">First Medium</label>
+          <div className="control">
+            <div className="select">
+              <select name="rating">
+                <option selected disabled value="">Please choose</option>
+                <option value="acrylic">Acrylics</option>
+                <option value="charcoal">Charcoal</option>
+                <option value="chalk">Chalk</option>
+                <option value="digital">Digital</option>
+                <option value="ink">Ink</option>
+                <option value="mixed-media">Mixed Media</option>
+                <option value="oil">Oils</option>
+                <option value="pencil">Pencil</option>
+                <option value="pastel">Pastel</option>
+                <option value="watercolour">Watercolour</option>
+                <option value="spray-paint">Spray Paint</option>
+              </select>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="field">
-        <label htmlFor="name">Second Medium</label>
-        <div className="control">
-          <div className="select">
-            <select name="rating">
-              <option selected disabled value="">Please choose</option>
-              <option value="none">None</option>
-              <option value="acrylic">Acrylics</option>
-              <option value="charcoal">Charcoal</option>
-              <option value="chalk">Chalk</option>
-              <option value="digital">Digital</option>
-              <option value="ink">Ink</option>
-              <option value="mixed-media">Mixed Media</option>
-              <option value="oil">Oils</option>
-              <option value="pencil">Pencil</option>
-              <option value="pastel">Pastel</option>
-              <option value="watercolour">Watercolour</option>
-              <option value="spray-paint">Spray Paint</option>
-            </select>
+        <div className="field">
+          <label htmlFor="name">Second Medium</label>
+          <div className="control">
+            <div className="select">
+              <select name="rating">
+                <option selected disabled value="">Please choose</option>
+                <option value="none">None</option>
+                <option value="acrylic">Acrylics</option>
+                <option value="charcoal">Charcoal</option>
+                <option value="chalk">Chalk</option>
+                <option value="digital">Digital</option>
+                <option value="ink">Ink</option>
+                <option value="mixed-media">Mixed Media</option>
+                <option value="oil">Oils</option>
+                <option value="pencil">Pencil</option>
+                <option value="pastel">Pastel</option>
+                <option value="watercolour">Watercolour</option>
+                <option value="spray-paint">Spray Paint</option>
+              </select>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="field">
-        <label htmlFor="name">Third Medium</label>
-        <div className="control">
-          <div className="select">
-            <select name="rating">
-              <option selected disabled value="">Please choose</option>
-              <option value="none">None</option>
-              <option value="acrylic">Acrylics</option>
-              <option value="charcoal">Charcoal</option>
-              <option value="chalk">Chalk</option>
-              <option value="digital">Digital</option>
-              <option value="ink">Ink</option>
-              <option value="mixed-media">Mixed Media</option>
-              <option value="oil">Oils</option>
-              <option value="pencil">Pencil</option>
-              <option value="pastel">Pastel</option>
-              <option value="watercolour">Watercolour</option>
-              <option value="spray-paint">Spray Paint</option>
-            </select>
+        <div className="field">
+          <label htmlFor="name">Third Medium</label>
+          <div className="control">
+            <div className="select">
+              <select name="rating">
+                <option selected disabled value="">Please choose</option>
+                <option value="none">None</option>
+                <option value="acrylic">Acrylics</option>
+                <option value="charcoal">Charcoal</option>
+                <option value="chalk">Chalk</option>
+                <option value="digital">Digital</option>
+                <option value="ink">Ink</option>
+                <option value="mixed-media">Mixed Media</option>
+                <option value="oil">Oils</option>
+                <option value="pencil">Pencil</option>
+                <option value="pastel">Pastel</option>
+                <option value="watercolour">Watercolour</option>
+                <option value="spray-paint">Spray Paint</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
 
 
-      <button className="button is-primary">Submit</button>
+      <button className="button">Submit</button>
     </form>
   );
 };

@@ -14,11 +14,12 @@ class Register extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('/register', this.state)
-      .then( res => {
+    axios.post('/api/register', this.state)
+      .then(res => {
         Auth.setToken(res.data.token);
       })
-      .then(() => this.props.history.push('/login'));
+      .then(() => this.props.history.push('/challenge'))
+      .catch(err => console.error(err));
   }
 
   render() {

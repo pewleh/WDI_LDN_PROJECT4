@@ -4,7 +4,7 @@
 
   .container{
     height:100vh;
-  }
+
 
   form, label, .field, .control{
     background-color: white;
@@ -25,18 +25,23 @@
     }
     button{
       background-color:#f1eded;
-      margin-left: 42%;
+      margin-left: 30%;
       margin-top: 5%;
       margin-bottom: -5%;
     }
   }
-  .register-box{
+  .register-box, .challengeSubmit-container{
     border: 1px solid #d0cece;
     width:65vw;
     padding: 5%;
     margin-left: 16.5%;
     margin-top: -90vh;
     background-color: white;
+
+    .description-input{
+      height: 10vh;
+      margin-bottom: 2vh;
+    }
 
     .register-title{
       background-color: white;
@@ -57,4 +62,17 @@
     margin-left: 24.5vw;
     margin-top: 2%;
   }
+}
+
+.challengeIndex-container{
+  margin-top: -90vh;
+
+  .challenge-title{
+    font-size: 3.5vw;
+  }
+}
+
+.help-container{      //refactor the containers at a more apporpriate time.
+  margin-top: -90vh;
+}
 }

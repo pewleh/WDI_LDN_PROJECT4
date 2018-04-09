@@ -36,10 +36,12 @@ class ChallengeSubmit extends React.Component {
   render() {
     return (
       <div className="container">
-        <Form
-          handleChange={this.handleChange}
-          handleSubmit={this.handleSubmit}
-          data={this.state} />
+        <section className="challengeSubmit-container">
+          <Form
+            handleChange={this.handleChange}
+            handleSubmit={this.handleSubmit}
+            data={this.state} />
+        </section>
       </div>
     );
   }
