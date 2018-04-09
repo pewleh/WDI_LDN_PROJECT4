@@ -2,7 +2,6 @@
 import React from 'react';
 import axios from 'axios';
 
-import { Link } from 'react-router-dom';
 
 class GalleryIndex extends React.Component {
 
@@ -11,7 +10,7 @@ class GalleryIndex extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('/api/artworks')//might need to change naming convention here.
+    axios.get('/api/artworks')
       .then(res => this.setState({ artworks: res.data }, () => console.log(this.state)));
   }
 
@@ -20,13 +19,11 @@ class GalleryIndex extends React.Component {
       <div className="container">
         <ul className="columns is-multiline">
           <li className="column is-one-third">
-            <Link to={`/GalleryIndex/${artwork._id}`}>
-              <div className="card">
-                <div className="card-content">
-                  <h1>HELLO</h1>
-                </div>
+            <div className="card">
+              <div className="card-content">
+                <h1>HELLO</h1>
               </div>
-            </Link>
+            </div>
           </li>
         </ul>
       </div>

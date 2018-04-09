@@ -9,8 +9,8 @@ import FlashMessages from './components/common/FlashMessages';
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 
-import ChallengeIndex from './components/challenges/ChallengeIndex';
-import ChallengeSubmit from './components/challenges/ChallengeSubmit';
+import ChallengesIndex from './components/challenges/ChallengesIndex';
+import ChallengesSubmit from './components/challenges/ChallengesSubmit';
 
 import GalleryIndex from './components/artworks/GalleryIndex';
 import GalleryShow from './components/artworks/GalleryShow';
@@ -29,9 +29,9 @@ class App extends React.Component {
           <Navbar />
           <FlashMessages />
           <Switch>
-            <Route path="/challenge/submit" component={ChallengeSubmit} />
+            <Route path="/challenges/submit" component={ChallengesSubmit} />
             <Route path="/gallery/:id" component={GalleryShow} />
-            <Route path="/challenge" component={ChallengeIndex} />
+            <Route path="/challenges" component={ChallengesIndex} />
             <Route path="/gallery" component={GalleryIndex} />
             <Route path="/register" component={Register} />
             <Route path="/login" component={Login} />

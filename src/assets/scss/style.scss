@@ -64,11 +64,24 @@
   }
 }
 
-.challengeIndex-container{
+.challengeIndex-container, .profile-container{
   margin-top: -90vh;
 
   .challenge-title{
     font-size: 3.5vw;
+    padding-bottom: 6vh;
+    
+  }
+  .updatable-data{
+    text-align: center;
+  }
+  .description-paragraph{
+    font-family: 'Nanum Brush Script', cursive;
+    font-size: 180%
+  }
+  a.button{
+    margin-left: 80vw;
+    margin-top: -30vh;
   }
 }
 
