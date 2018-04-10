@@ -9,6 +9,11 @@ class Navbar extends React.Component {
     navIsOpen: false
   }
 
+  componentDidMount(){
+    const userId = Auth.getPayload().sub;
+    this.setState({ userId: userId}, () => console.log(this.state.userId));
+  }
+
   handleToggle = () => {
     this.setState({ navIsOpen: !this.state.navIsOpen });
   }
@@ -27,7 +32,7 @@ class Navbar extends React.Component {
     return (
       <nav className="navbar">
         <div className="navbar-brand">
-          <Link className="navbar-item" to="/challenge">
+          <Link className="navbar-item" to="/challenges">
             LOGO
           </Link>
           <div
@@ -44,7 +49,7 @@ class Navbar extends React.Component {
             <Link className="navbar-item" to="/artworks"></Link>
             {Auth.isAuthenticated() &&<Link className="navbar-item" to="/challenges">Challenge</Link>}
             {Auth.isAuthenticated() &&<Link className="navbar-item" to="/artworks">Gallery</Link>}
-            {Auth.isAuthenticated() && <Link className="navbar-item" to="/profile">Profile</Link>}
+            {Auth.isAuthenticated() && <Link className="navbar-item" to={`/profile/${this.state.userId}`}>Profile</Link>}
             {Auth.isAuthenticated() && <Link className="navbar-item" to="/help">Help</Link>}
             {Auth.isAuthenticated() && <a className="navbar-item" onClick={this.handleLogout}>Logout</a>}
 

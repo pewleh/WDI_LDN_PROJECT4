@@ -12,13 +12,19 @@ class Register extends React.Component {
     this.setState({ [name]: value }, () => console.log(this.state));
   }
 
+  handleMediaSelect = (medium, index) => {
+    const media = this.state.media ? [ ...this.state.media ] : [];
+    media[index] = medium;
+    this.setState({ media: media }, () => console.log(this.state));
+  }
+
   handleSubmit = (e) => {
     e.preventDefault();
     axios.post('/api/register', this.state)
       .then(res => {
         Auth.setToken(res.data.token);
       })
-      .then(() => this.props.history.push('/challenge'))
+      .then(() => this.props.history.push('/login'))
       .catch(err => console.error(err));
   }
 
@@ -33,6 +39,14 @@ class Register extends React.Component {
               <input className="input"
                 placeholder="Username"
                 name="username"
+                onChange={this.handleChange}
+              />
+            </div>
+            <div className="field">
+              <label htmlFor="image">Profile picture</label>
+              <input className="input"
+                placeholder="http://2.bp.blogspot.com/-Z-VdrdfcL7E/UBwzgRNGUqI/AAAAAAACWwA/ExJ8dZdMmu8/s1600/995526-088.jpg"
+                name="image"
                 onChange={this.handleChange}
               />
             </div>
@@ -70,7 +84,7 @@ class Register extends React.Component {
                 <label htmlFor="name">Prefered medium</label>
                 <div className="control">
                   <div className="select">
-                    <select name="rating">
+                    <select name="media" onChange={(e) => this.handleMediaSelect(e.target.value, 0)}>
                       <option selected disabled value="">Please choose</option>
                       <option value="acrylic">Acrylics</option>
                       <option value="charcoal">Charcoal</option>
@@ -91,7 +105,7 @@ class Register extends React.Component {
                 <label htmlFor="name">Prefered medium</label>
                 <div className="control">
                   <div className="select">
-                    <select name="rating">
+                    <select name="media" onChange={(e) => this.handleMediaSelect(e.target.value, 1)}>
                       <option selected disabled value="">Please choose</option>
                       <option value="acrylic">Acrylics</option>
                       <option value="charcoal">Charcoal</option>
@@ -112,7 +126,7 @@ class Register extends React.Component {
                 <label htmlFor="name">Prefered medium</label>
                 <div className="control">
                   <div className="select">
-                    <select name="rating">
+                    <select name="media" onChange={(e) => this.handleMediaSelect(e.target.value, 2)}>
                       <option selected disabled value="">Please choose</option>
                       <option value="acrylic">Acrylics</option>
                       <option value="charcoal">Charcoal</option>

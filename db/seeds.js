@@ -60,7 +60,9 @@ mongoose.connect(dbURI, (err, db) => {
     })
     .then(() => User.create([{
       username: 'pewleh',
+      image: 'https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/23132046_10214115552513427_988005481042127131_n.jpg?_nc_cat=0&oh=1ad44d6f3237594f918b768e4fc03521&oe=5B2B867C',
       admin: true,
+      media: ['acrylic', 'ink', 'charcoal'],
       email: 'pewlehh@gmail.com',
       password: 'AdminPass',
       passwordConfirmation: 'AdminPass'

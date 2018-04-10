@@ -3,7 +3,7 @@
   font-family: 'Fredericka the Great', cursive;
 
   .container{
-    height:100vh;
+    height: 100vh;
 
 
   form, label, .field, .control{
@@ -112,6 +112,30 @@
 }
 }
 
+.profile-container{
 
+  .profile-image{
+    max-width:24vw;
+    border-radius: 5%;
+    padding: 20px;
+    border: 1.5px solid #d0cece;
+    margin-left: 6vw;
+    margin-top: 10vh;
+
+}
+  .profile-title{
+    float: right;
+    margin-right: 24vw;
+    margin-top: 14vh;
+    font-size: 500%;
+  }
+  .profile-medium{
+    max-width: 5vw;
+    display: inline-block;
+    float: right;
+    margin-right: 12.5vw;
+    margin-top: -9vh;
+  }
+}
 
 }

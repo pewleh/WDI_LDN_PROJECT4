@@ -3,6 +3,8 @@ const router = require('express').Router();
 const artworks = require('../controllers/artworks');
 const challenges = require('../controllers/challenges');
 
+const users = require('../controllers/users');
+
 const auth = require('../controllers/auth');
 const secureRoute = require('../lib/secureRoute');
 
@@ -26,6 +28,12 @@ router.route('/register')
 
 router.route('/login')
   .post(auth.login);
+
+router.route('/users')
+  .get(users.index);
+
+router.route('/users/:id')
+  .get(users.show);
 
 //anything else.
 router.route('/*')

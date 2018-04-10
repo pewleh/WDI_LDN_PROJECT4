@@ -37,7 +37,7 @@ class App extends React.Component {
             <Route path="/register" component={Register} />
             <Route path="/login" component={Login} />
             <Route path="/help" component={Help} />
-            <Route path="/profile" component={Profile} />
+            <Route path="/profile/:id" component={Profile} />
           </Switch>
         </main>
       </BrowserRouter>
