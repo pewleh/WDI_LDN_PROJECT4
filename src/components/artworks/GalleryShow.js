@@ -7,7 +7,7 @@ class GalleryShow extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(`/artworks/${this.props.match.params.id}`)
+    axios.get(`/api/artworks/${this.props.match.params.id}`)
       .then(res => this.setState({ artwork: res.data }, () => console.log(this.state.artwork)));
   }
 
@@ -15,11 +15,17 @@ class GalleryShow extends React.Component {
   render() {
     if(!this.state.artwork) return null;
     return (
-      <section>
-        <h1>{this.state.artwork.name}</h1>
-        <h1>{this.state.artwork.image}</h1>
-        <h2>{this.state.user.name}</h2>
-      </section>
+      <div className="container">
+        <div className="artworks-container">
+          <section>
+            <h1 className="submitted-title">{this.state.artwork.name}</h1> 
+            <div className="image-container">
+              <img className="submitted-image" src={this.state.artwork.image}/>
+              <p>{this.state.artwork.description}</p>
+            </div>
+          </section>
+        </div>
+      </div>
     );
   }
 }

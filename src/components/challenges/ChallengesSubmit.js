@@ -25,11 +25,11 @@ class ChallengeSubmit extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post('/api/bangers', this.state, {
+    axios.post('/api/artworks', this.state, {
       headers: { Authorization: `Bearer ${Auth.getToken()}`}
     })
-      .then(() => Flash.setMessages('success', 'Succesfully Created a baannger!'))
-      .then(() => this.props.history.push('/gallery/index'))
+      .then(() => Flash.setMessages('success', 'Your post has been submitted!'))
+      .then(() => this.props.history.push('/artworks'))
       .catch(err => this.setState({ errors: err.response.data.errors}));
   }
 

@@ -28,11 +28,12 @@ class App extends React.Component {
         <main>
           <Navbar />
           <FlashMessages />
+
           <Switch>
             <Route path="/challenges/submit" component={ChallengesSubmit} />
-            <Route path="/gallery/:id" component={GalleryShow} />
+            <Route path="/artworks/:id" component={GalleryShow} />
             <Route path="/challenges" component={ChallengesIndex} />
-            <Route path="/gallery" component={GalleryIndex} />
+            <Route path="/artworks" component={GalleryIndex} />
             <Route path="/register" component={Register} />
             <Route path="/login" component={Login} />
             <Route path="/help" component={Help} />

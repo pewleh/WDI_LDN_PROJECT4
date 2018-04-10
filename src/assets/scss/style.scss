@@ -64,13 +64,19 @@
   }
 }
 
-.challengeIndex-container, .profile-container{
+.challengeIndex-container, .profile-container, .artworks-container{
   margin-top: -90vh;
 
+
+.countdown-container{
+  width: 20vw;
+  position: absolute;
+  margin-top: 19vh;
+}
   .challenge-title{
     font-size: 3.5vw;
     padding-bottom: 6vh;
-    
+
   }
   .updatable-data{
     text-align: center;
@@ -88,4 +94,24 @@
 .help-container{      //refactor the containers at a more apporpriate time.
   margin-top: -90vh;
 }
+
+//SHOW ARTWORK
+.artworks-container{
+.submitted-title{
+  font-size: 200%;
+  position: absolute;
+  margin-top: 25vh;
+  margin-left: 5vw;
+}
+.image-container{
+  text-align: center;
+  .submitted-image{
+    width: 30vw;
+    padding-bottom: 20px;
+  }
+}
+}
+
+
+
 }
