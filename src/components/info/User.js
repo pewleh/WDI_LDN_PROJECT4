@@ -21,10 +21,10 @@ class Profile extends React.Component{
             <h1 className="profile-title">{this.state.user.username}</h1>
             {/* <p>ranking</p>    dont uncheck NOT MVP*/}
           </div>
-          {this.state.user.media && this.state.user.media.map((medium, i) =>
-            <img className="profile-medium" key={i} src={`/assets/images/${medium}.svg`} />
-          )}
           <div className="submission-container">
+            {this.state.user.media && this.state.user.media.map((medium, i) =>
+              <img className="profile-medium" key={i} src={`/assets/images/${medium}.svg`} />
+            )}
             {/* array of submitted work -> everytime a submission is made it should be pushed into this array */}
           </div>
           <div className="fave-users-container">

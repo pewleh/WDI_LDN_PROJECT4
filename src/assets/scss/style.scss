@@ -105,11 +105,29 @@
 }
 .image-container{
   text-align: center;
+
+
   .submitted-image{
     width: 30vw;
     padding-bottom: 20px;
+    margin-left: 17vw;
+
   }
 }
+.media-block{
+  width: 5vw;
+  float:right;
+  margin-right: 15vw;
+  margin-top: 20vh;
+  text-align: center
+}
+
+.artwork-medium{
+  max-width: 5vw;
+  display: block;
+  padding: 15px;
+}
+
 }
 
 .profile-container{
@@ -126,16 +144,16 @@
   .profile-title{
     float: right;
     margin-right: 24vw;
-    margin-top: 14vh;
+    margin-top: 20vh;
     font-size: 500%;
   }
-  .profile-medium{
-    max-width: 5vw;
-    display: inline-block;
-    float: right;
-    margin-right: 12.5vw;
-    margin-top: -9vh;
-  }
+}
+.profile-medium{
+  max-width: 8vw;
+  float:right;
+  padding: 20px;
+  margin-right: 10vw;
+  margin-top: -13vh;
 }
 
 }

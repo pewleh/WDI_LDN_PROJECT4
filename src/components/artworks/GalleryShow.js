@@ -18,9 +18,14 @@ class GalleryShow extends React.Component {
       <div className="container">
         <div className="artworks-container">
           <section>
-            <h1 className="submitted-title">{this.state.artwork.name}</h1> 
+            <h1 className="submitted-title">{this.state.artwork.name}</h1>
             <div className="image-container">
               <img className="submitted-image" src={this.state.artwork.image}/>
+              <div className="media-block">
+                {this.state.artwork.media && this.state.artwork.media.map((medium, i) =>
+                  <img className="artwork-medium" key={i} src={`/assets/images/${medium}.svg`} />
+                )}
+              </div>
               <p>{this.state.artwork.description}</p>
             </div>
           </section>

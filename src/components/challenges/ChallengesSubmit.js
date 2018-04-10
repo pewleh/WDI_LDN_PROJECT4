@@ -21,7 +21,11 @@ class ChallengeSubmit extends React.Component {
     const errors = Object.assign({}, this.state.errors, { [name]: ''});
     this.setState({ [name]: value, errors }, () => console.log(this.state));
   }
-
+  handleMediaSelect = (medium, index) => {
+    const media = this.state.media ? [ ...this.state.media ] : [];
+    media[index] = medium;
+    this.setState({ media: media }, () => console.log(this.state));
+  }
   handleSubmit = (e) => {
     e.preventDefault();
 
@@ -39,6 +43,7 @@ class ChallengeSubmit extends React.Component {
         <section className="challengeSubmit-container">
           <Form
             handleChange={this.handleChange}
+            handleMediaSelect={this.handleMediaSelect}
             handleSubmit={this.handleSubmit}
             data={this.state} />
         </section>

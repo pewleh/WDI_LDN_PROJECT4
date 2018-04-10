@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Form = ({handleSubmit, handleChange, data}) => {
+const Form = ({handleSubmit, handleChange, handleMediaSelect, data}) => {
   return (
     <form onSubmit={handleSubmit}>
       <div className="field">
@@ -38,7 +38,7 @@ const Form = ({handleSubmit, handleChange, data}) => {
           <label htmlFor="name">First Medium</label>
           <div className="control">
             <div className="select">
-              <select name="rating">
+              <select name="media"onChange={(e) => handleMediaSelect(e.target.value, 0)}>
                 <option selected disabled value="">Please choose</option>
                 <option value="acrylic">Acrylics</option>
                 <option value="charcoal">Charcoal</option>
@@ -59,7 +59,7 @@ const Form = ({handleSubmit, handleChange, data}) => {
           <label htmlFor="name">Second Medium</label>
           <div className="control">
             <div className="select">
-              <select name="rating">
+              <select name="media"onChange={(e) => handleMediaSelect(e.target.value, 2)}>
                 <option selected disabled value="">Please choose</option>
                 <option value="none">None</option>
                 <option value="acrylic">Acrylics</option>
@@ -81,7 +81,7 @@ const Form = ({handleSubmit, handleChange, data}) => {
           <label htmlFor="name">Third Medium</label>
           <div className="control">
             <div className="select">
-              <select name="rating">
+              <select name="media"onChange={(e) => handleMediaSelect(e.target.value, 2)}>
                 <option selected disabled value="">Please choose</option>
                 <option value="none">None</option>
                 <option value="acrylic">Acrylics</option>
