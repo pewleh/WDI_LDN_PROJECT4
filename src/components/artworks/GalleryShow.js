@@ -2,13 +2,16 @@ import React from 'react';
 import axios from 'axios';
 
 import Counter from '../common/Counter';
+import { Link } from 'react-router-dom';
+
 import Auth from '../lib/Auth';
 
 
 class GalleryShow extends React.Component {
   state = {
     artwork: null,
-    userId: ''
+    userId: '',
+    deletePressed: false
   }
 
   componentDidMount() {
@@ -16,6 +19,18 @@ class GalleryShow extends React.Component {
     axios.get(`/api/artworks/${this.props.match.params.id}`)
       .then(res => this.setState({ artwork: res.data, userId: userId }));
   }
+
+  toggleDeletePressed = () =>{
+    this.setState({ deletePressed: !this.state.deletePressed });
+  }
+
+handleDelete = () =>{
+  const artwork = this.state.artwork;
+  axios.delete(`/api/artworks/${this.props.match.params.id}`, artwork, {
+    headers: { Authorization: `Bearer ${Auth.getToken()}`}
+  })
+    .then(() => this.props.history.push('/artworks'));
+}
 
   like = () => {
     const artwork = Object.assign({}, this.state.artwork);
@@ -40,7 +55,21 @@ class GalleryShow extends React.Component {
         <div className="artworks-container">
           <section>
             <h1 className="submitted-title">{this.state.artwork.name}</h1>
-            {this.state.artwork.createdBy && <h2 className="submitted-subtitle">{this.state.artwork.createdBy.username}</h2>}
+            {this.state.artwork.createdBy && <Link to={`/profile/${this.state.artwork.createdBy._id}`} className="submitted-subtitle">{this.state.artwork.createdBy.username}</Link>}
+            <div className="mod-button">
+              {this.state.deletePressed ? (
+                <div>
+                  <p>Are you sure?</p>
+                  <button className="button" onClick={this.handleDelete}>Yes</button>
+                  <button className="button" onClick={this.toggleDeletePressed}>No</button>
+                </div>
+              ) : (
+                <div>
+                  <Link className="edit-button" to={`/artworks/${this.props.match.params.id}/edit`}>Edit</Link>
+                  <button className="delete-button" onClick={this.toggleDeletePressed}>Delete</button>
+                </div>
+              )}
+            </div>
             <div className="image-container">
               <img className="submitted-image" src={this.state.artwork.image}/>
               <div className="media-block">

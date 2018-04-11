@@ -46,9 +46,10 @@ class Register extends React.Component {
             <div className="field">
               <label htmlFor="image">Profile picture</label>
               <input className="input"
-                placeholder="http://2.bp.blogspot.com/-Z-VdrdfcL7E/UBwzgRNGUqI/AAAAAAACWwA/ExJ8dZdMmu8/s1600/995526-088.jpg"
+                placeholder="image"
                 name="image"
                 onChange={this.handleChange}
+                // value="http://2.bp.blogspot.com/-Z-VdrdfcL7E/UBwzgRNGUqI/AAAAAAACWwA/ExJ8dZdMmu8/s1600/995526-088.jpg"
               />
             </div>
             <div className="field">

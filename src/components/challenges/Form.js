@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Form = ({handleSubmit, handleChange, handleMediaSelect, data}) => {
+  console.log(data.media);
   return (
     <form onSubmit={handleSubmit}>
       <div className="field">
@@ -38,7 +39,7 @@ const Form = ({handleSubmit, handleChange, handleMediaSelect, data}) => {
           <label htmlFor="name">First Medium</label>
           <div className="control">
             <div className="select">
-              <select name="media"onChange={(e) => handleMediaSelect(e.target.value, 0)}>
+              <select value={data.media[0]} name="media"onChange={(e) => handleMediaSelect(e.target.value, 0)}>
                 <option selected disabled value="">Please choose</option>
                 <option value="acrylic">Acrylics</option>
                 <option value="charcoal">Charcoal</option>
@@ -59,7 +60,7 @@ const Form = ({handleSubmit, handleChange, handleMediaSelect, data}) => {
           <label htmlFor="name">Second Medium</label>
           <div className="control">
             <div className="select">
-              <select name="media"onChange={(e) => handleMediaSelect(e.target.value, 2)}>
+              <select value={data.media[1]} name="media"onChange={(e) => handleMediaSelect(e.target.value, 1)}>
                 <option selected disabled value="">Please choose</option>
                 <option value="none">None</option>
                 <option value="acrylic">Acrylics</option>
@@ -81,7 +82,7 @@ const Form = ({handleSubmit, handleChange, handleMediaSelect, data}) => {
           <label htmlFor="name">Third Medium</label>
           <div className="control">
             <div className="select">
-              <select name="media"onChange={(e) => handleMediaSelect(e.target.value, 2)}>
+              <select value={data.media[2]} name="media"onChange={(e) => handleMediaSelect(e.target.value, 2)}>
                 <option selected disabled value="">Please choose</option>
                 <option value="none">None</option>
                 <option value="acrylic">Acrylics</option>

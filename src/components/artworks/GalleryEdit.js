@@ -4,9 +4,9 @@ import axios from 'axios';
 import Auth from '../lib/Auth';
 
 import Flash from '../lib/Flash';
-import Form from './Form';
+import Form from '../challenges/Form';
 
-class ChallengeSubmit extends React.Component {
+class GalleryEdit extends React.Component {
 
   state = {
     name: '',
@@ -17,6 +17,11 @@ class ChallengeSubmit extends React.Component {
     album: '',
     errors: {},
     user: []
+  }
+
+  componentDidMount() {
+    axios.get(`/api/artworks/${this.props.match.params.id}`)
+      .then(res => this.setState(res.data, () => console.log(this.state)));
   }
 
   handleChange = ({ target: { name, value }  }) => {
@@ -31,11 +36,14 @@ class ChallengeSubmit extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
 
-    axios.post('/api/artworks', this.state, {
-      headers: { Authorization: `Bearer ${Auth.getToken()}`}
+    axios({
+      method: 'PUT',
+      url: `/api/artworks/${this.props.match.params.id}`,
+      headers: { Authorization: `Bearer ${Auth.getToken()}` },
+      data: this.state
     })
-      .then(() => Flash.setMessages('success', 'Your post has been submitted!'))
-      .then(() => this.props.history.push('/artworks'))
+      .then(() => Flash.setMessages('success', 'Your post has been updated!'))
+      .then(() => this.props.history.push(`/artworks/${this.props.match.params.id}`))
       .catch(err => this.setState({ errors: err.response.data.errors}));
 
     axios.post(`/profile/${this.state.userId}`, this.state, {
@@ -61,4 +69,4 @@ class ChallengeSubmit extends React.Component {
   }
 }
 
-export default ChallengeSubmit;
+export default GalleryEdit;
