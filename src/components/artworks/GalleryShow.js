@@ -1,21 +1,40 @@
 import React from 'react';
 import axios from 'axios';
 
+import Counter from '../common/Counter';
+import Auth from '../lib/Auth';
+
+
 class GalleryShow extends React.Component {
   state = {
     artwork: null,
-    user: []
+    userId: ''
   }
 
   componentDidMount() {
+    const userId = Auth.getPayload().sub;
     axios.get(`/api/artworks/${this.props.match.params.id}`)
-      .then(res => this.setState({ artwork: res.data }, () => console.log(this.state.artwork)));
+      .then(res => this.setState({ artwork: res.data, userId: userId }));
   }
 
+  like = () => {
+    const artwork = Object.assign({}, this.state.artwork);
+    if (artwork.likes.includes(this.state.userId)) return false;
+    artwork.likes.push(this.state.userId);
+    axios.put(`/api/artworks/${artwork._id}`, artwork, {
+      headers: { Authorization: `Bearer ${Auth.getToken()}`}
+    })
+      .then(res => {
+        console.log(res.data);
+        this.setState({ artwork: res.data });
+      })
+      .catch(err => console.error(err));
+  }
 
   render() {
     if(!this.state.artwork) return null;
-    console.log('artist:', this.state.artwork.createdBy);
+    console.log(this.state.artwork);
+    // console.log('artist:', this.state.artwork.createdBy);
     return (
       <div className="container">
         <div className="artworks-container">
@@ -30,6 +49,7 @@ class GalleryShow extends React.Component {
                 )}
               </div>
               <p>{this.state.artwork.description}</p>
+              <Counter artwork={this.state.artwork} like={this.like} />
             </div>
           </section>
         </div>

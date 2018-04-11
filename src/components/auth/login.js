@@ -16,7 +16,10 @@ class Login extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     axios.post('/api/login', this.state)
-      .then( res => Auth.setToken(res.data.token))
+      .then(res => {
+        this.props.setUserId(res.data.user._id);
+        Auth.setToken(res.data.token);
+      })
       .then(() => Flash.setMessages('success', 'Welcome back!'))
       .then(() => this.props.history.push('/challenge'));
   }

@@ -141,6 +141,9 @@
 
 .profile-container{
 
+  .personal-info{
+    padding-bottom: 30px;
+  }
   .profile-image{
     max-width:24vw;
     border-radius: 5%;
@@ -152,7 +155,7 @@
 }
   .profile-title{
     float: right;
-    margin-right: 24vw;
+    margin-right: 25vw;
     margin-top: 20vh;
     font-size: 500%;
   }
@@ -162,7 +165,7 @@
   float:right;
   padding: 20px;
   margin-right: 10vw;
-  margin-top: -13vh;
+  margin-top: -13.5vh;
 }
 .inner-submission-container{
  width: 70vw;

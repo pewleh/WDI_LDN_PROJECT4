@@ -17,16 +17,32 @@ import GalleryShow from './components/artworks/GalleryShow';
 import Help from './components/info/Help';
 import Profile from './components/info/User';
 
+import Auth from './components/lib/Auth';
+
 import './assets/scss/style.scss';
 
 import 'bulma';
 
 class App extends React.Component {
+
+  state = {
+    userId: ''
+  }
+
+  componentDidMount(){
+    const userId = Auth.getPayload().sub;
+    this.setState({ userId: userId }, () => console.log(this.state.userId));
+  }
+
+  setUserId = (userId) => {
+    this.setState({ userId: userId });
+  }
+
   render() {
     return (
       <BrowserRouter>
         <main>
-          <Navbar />
+          <Navbar userId={this.state.userId} />
           <FlashMessages />
 
           <Switch>
@@ -34,8 +50,8 @@ class App extends React.Component {
             <Route path="/artworks/:id" component={GalleryShow} />
             <Route path="/challenges" component={ChallengesIndex} />
             <Route path="/artworks" component={GalleryIndex} />
-            <Route path="/register" component={Register} />
-            <Route path="/login" component={Login} />
+            <Route path="/register" render={props => <Register {...props} setUserId={this.setUserId} />} />
+            <Route path="/login" render={props => <Login {...props} setUserId={this.setUserId} />} />
             <Route path="/help" component={Help} />
             <Route path="/profile/:id" component={Profile} />
           </Switch>
