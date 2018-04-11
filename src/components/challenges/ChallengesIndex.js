@@ -13,7 +13,7 @@ class ChallengesIndex extends React.Component{
     axios.get('/api/challenges')
       .then(res => this.setState({ challenges: res.data }, () => console.log(this.state)));
   }
-  //submit
+  
   handleChange = (e) => {
     console.log(e.target.value);
     this.setState({ search: e.target.value }, () => console.log(this.state));

@@ -98,20 +98,29 @@
 //SHOW ARTWORK
 .artworks-container{
 .submitted-title{
-  font-size: 200%;
+  font-size: 300%;
   position: absolute;
   margin-top: 25vh;
-  margin-left: 5vw;
+  margin-left: 3vw;
+}
+.submitted-subtitle{
+  font-size: 150%;
+  margin-top: 32vh;
+  position: absolute;
+  margin-left: 20vw;
 }
 .image-container{
   text-align: center;
 
 
   .submitted-image{
-    width: 30vw;
+    max-width: 40vw;
+    min-width: 20vw;
     padding-bottom: 20px;
-    margin-left: 17vw;
-
+    margin-left: 25vw;
+    padding: 15px;
+    border: 1.5px solid #d0cece;
+    border-radius: 5%;
   }
 }
 .media-block{
@@ -123,7 +132,7 @@
 }
 
 .artwork-medium{
-  max-width: 5vw;
+  max-width: 6vw;
   display: block;
   padding: 15px;
 }
@@ -155,5 +164,20 @@
   margin-right: 10vw;
   margin-top: -13vh;
 }
+.inner-submission-container{
+ width: 70vw;
+ text-align: center;
+ border-top: 1.5px solid #d0cece;
+ margin-left: 10vw;
+ margin-top: 15vh;
+ padding: 15px;
 
+ .inner-submission-title{
+   padding: 40px;
+ }
+}
+
+.navbar-item{
+  font-size: 140%;
+}
 }

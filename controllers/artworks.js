@@ -8,6 +8,7 @@ function indexRoute(req, res, next) {
 }
 
 function createRoute(req, res, next) {
+  req.body.createdBy = req.currentUser;
   return Artwork.create(req.body)
     .then(artwork => res.status(201).json(artwork))
     .catch(next);
@@ -15,6 +16,7 @@ function createRoute(req, res, next) {
 
 function showRoute(req, res, next) {
   return Artwork.findById(req.params.id)
+    .populate('createdBy')
     .then(artwork => res.json(artwork))
     .catch(next);
 }

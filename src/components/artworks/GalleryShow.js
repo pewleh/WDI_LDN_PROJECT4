@@ -3,7 +3,8 @@ import axios from 'axios';
 
 class GalleryShow extends React.Component {
   state = {
-    artwork: null
+    artwork: null,
+    user: []
   }
 
   componentDidMount() {
@@ -14,11 +15,13 @@ class GalleryShow extends React.Component {
 
   render() {
     if(!this.state.artwork) return null;
+    console.log('artist:', this.state.artwork.createdBy);
     return (
       <div className="container">
         <div className="artworks-container">
           <section>
             <h1 className="submitted-title">{this.state.artwork.name}</h1>
+            {this.state.artwork.createdBy && <h2 className="submitted-subtitle">{this.state.artwork.createdBy.username}</h2>}
             <div className="image-container">
               <img className="submitted-image" src={this.state.artwork.image}/>
               <div className="media-block">

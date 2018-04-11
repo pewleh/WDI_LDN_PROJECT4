@@ -6,9 +6,8 @@ const artworkSchema = new mongoose.Schema({
   description: { type: String, required: true },
   media: [{ type: String}],
   likes: [{type: mongoose.Schema.ObjectId, ref: 'User'}],
+  createdBy: {type: mongoose.Schema.ObjectId, ref: 'User'},
   challenge: {type: mongoose.Schema.ObjectId, ref: 'Challenge'}
-
-
 });
 
 module.exports = mongoose.model('Artwork', artworkSchema);

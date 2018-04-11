@@ -74,6 +74,7 @@ mongoose.connect(dbURI, (err, db) => {
       description: 'I was particularly inspired by the use of lighting Vermeer chose in his own piece. I decided I should have a little play around too! First time working in oils!',
       challenge: challenges[0],
       media: ['oil', 'none', 'none']
+
     }]))
     .then(artworks => console.log(`${artworks.length} artworks created!`))
     .catch(err => console.log(err))
