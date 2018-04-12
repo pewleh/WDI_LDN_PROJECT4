@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Form = ({handleSubmit, handleChange, handleMediaSelect, data}) => {
-  console.log(data.media);
   return (
     <form onSubmit={handleSubmit}>
       <div className="field">
@@ -13,6 +12,7 @@ const Form = ({handleSubmit, handleChange, handleMediaSelect, data}) => {
           onChange={handleChange}
           value={data.name}
         />
+        {data.errors.name && <small>{data.errors.name}</small>}
       </div>
       <div className="field">
         <label htmlFor="name">Image</label>
@@ -23,24 +23,26 @@ const Form = ({handleSubmit, handleChange, handleMediaSelect, data}) => {
           onChange={handleChange}
           value={data.image}
         />
+        {data.errors.image && <small>{data.errors.image}</small>}
       </div>
       <div className="field">
         <label htmlFor="name">Description</label>
-        <input
+        <textarea
           className="input description-input"
           placeholder="Description"
           name="description"
           onChange={handleChange}
           value={data.description}
         />
+        {data.errors.description && <small>{data.errors.description}</small>}
       </div>
       <div className="medium-controls">
         <div className="field">
           <label htmlFor="name">First Medium</label>
           <div className="control">
             <div className="select">
-              <select value={data.media[0]} name="media"onChange={(e) => handleMediaSelect(e.target.value, 0)}>
-                <option selected disabled value="">Please choose</option>
+              <select value={data.media[0]} name="media" onChange={(e) => handleMediaSelect(e.target.value, 0)}>
+                <option disabled value="">Please choose</option>
                 <option value="acrylic">Acrylics</option>
                 <option value="charcoal">Charcoal</option>
                 <option value="chalk">Chalk</option>
@@ -56,12 +58,13 @@ const Form = ({handleSubmit, handleChange, handleMediaSelect, data}) => {
             </div>
           </div>
         </div>
+        {data.errors.control && <small>{data.errors.control}</small>}
         <div className="field">
           <label htmlFor="name">Second Medium</label>
           <div className="control">
             <div className="select">
-              <select value={data.media[1]} name="media"onChange={(e) => handleMediaSelect(e.target.value, 1)}>
-                <option selected disabled value="">Please choose</option>
+              <select value={data.media[1]} name="media" onChange={(e) => handleMediaSelect(e.target.value, 1)}>
+                <option disabled value="">Please choose</option>
                 <option value="none">None</option>
                 <option value="acrylic">Acrylics</option>
                 <option value="charcoal">Charcoal</option>
@@ -78,12 +81,14 @@ const Form = ({handleSubmit, handleChange, handleMediaSelect, data}) => {
             </div>
           </div>
         </div>
+        {data.errors.control && <small>{data.errors.control}</small>}
+
         <div className="field">
           <label htmlFor="name">Third Medium</label>
           <div className="control">
             <div className="select">
-              <select value={data.media[2]} name="media"onChange={(e) => handleMediaSelect(e.target.value, 2)}>
-                <option selected disabled value="">Please choose</option>
+              <select value={data.media[2]} name="media" onChange={(e) => handleMediaSelect(e.target.value, 2)}>
+                <option disabled value="">Please choose</option>
                 <option value="none">None</option>
                 <option value="acrylic">Acrylics</option>
                 <option value="charcoal">Charcoal</option>
@@ -101,6 +106,8 @@ const Form = ({handleSubmit, handleChange, handleMediaSelect, data}) => {
           </div>
         </div>
       </div>
+      {data.errors.control && <small>{data.errors.control}</small>}
+
 
 
       <button className="button">Submit</button>

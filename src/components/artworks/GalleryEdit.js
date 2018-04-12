@@ -10,13 +10,9 @@ class GalleryEdit extends React.Component {
 
   state = {
     name: '',
-    artist: '',
-    releaseDate: '',
-    media: [null, null, null],
-    genre: '',
-    album: '',
-    errors: {},
-    user: []
+    image: '',
+    media: ['', '', ''],
+    errors: {}
   }
 
   componentDidMount() {
@@ -45,13 +41,6 @@ class GalleryEdit extends React.Component {
       .then(() => Flash.setMessages('success', 'Your post has been updated!'))
       .then(() => this.props.history.push(`/artworks/${this.props.match.params.id}`))
       .catch(err => this.setState({ errors: err.response.data.errors}));
-
-    axios.post(`/profile/${this.state.userId}`, this.state, {
-      headers: { Authorization: `Bearer ${Auth.getToken()}`}
-    })
-      .then(() => this.props.history.push('/artworks'))
-      .catch(err => this.setState({ errors: err.response.data.errors}));
-
   }
 
   render() {

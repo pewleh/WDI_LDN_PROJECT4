@@ -13,7 +13,7 @@ class ChallengesIndex extends React.Component{
     axios.get('/api/challenges')
       .then(res => this.setState({ challenges: res.data }, () => console.log(this.state)));
   }
-  
+
   handleChange = (e) => {
     console.log(e.target.value);
     this.setState({ search: e.target.value }, () => console.log(this.state));
@@ -24,7 +24,7 @@ class ChallengesIndex extends React.Component{
     return(
       <div className="container">
         <section className="challengeIndex-container">
-          <h1 className="challenge-title">This weeks challenges...</h1>
+          <h1 className="challenge-title">This week&apos;s challenges...</h1>
 
           <div className="updatable-data">
             <div>

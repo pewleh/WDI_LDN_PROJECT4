@@ -44,7 +44,7 @@ class Register extends React.Component {
               />
             </div>
             <div className="field">
-              <label htmlFor="image">Profile picture</label>
+              <label htmlFor="image">Profile Picture</label>
               <input className="input"
                 placeholder="image"
                 name="image"
@@ -83,7 +83,7 @@ class Register extends React.Component {
             </div>
             <div className="medium-controls">
               <div className="field">
-                <label htmlFor="name">Prefered medium</label>
+                <label htmlFor="name">Preferred Medium</label>
                 <div className="control">
                   <div className="select">
                     <select name="media" onChange={(e) => this.handleMediaSelect(e.target.value, 0)}>
@@ -104,7 +104,7 @@ class Register extends React.Component {
                 </div>
               </div>
               <div className="field">
-                <label htmlFor="name">Prefered medium</label>
+                <label htmlFor="name">Preferred Medium</label>
                 <div className="control">
                   <div className="select">
                     <select name="media" onChange={(e) => this.handleMediaSelect(e.target.value, 1)}>
@@ -125,7 +125,7 @@ class Register extends React.Component {
                 </div>
               </div>
               <div className="field">
-                <label htmlFor="name">Prefered medium</label>
+                <label htmlFor="name">Preferred Medium</label>
                 <div className="control">
                   <div className="select">
                     <select name="media" onChange={(e) => this.handleMediaSelect(e.target.value, 2)}>

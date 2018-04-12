@@ -10,13 +10,9 @@ class ChallengeSubmit extends React.Component {
 
   state = {
     name: '',
-    artist: '',
-    releaseDate: '',
-    media: [null, null, null],
-    genre: '',
-    album: '',
-    errors: {},
-    user: []
+    image: '',
+    media: ['', '', ''],
+    errors: {}
   }
 
   handleChange = ({ target: { name, value }  }) => {
@@ -35,12 +31,6 @@ class ChallengeSubmit extends React.Component {
       headers: { Authorization: `Bearer ${Auth.getToken()}`}
     })
       .then(() => Flash.setMessages('success', 'Your post has been submitted!'))
-      .then(() => this.props.history.push('/artworks'))
-      .catch(err => this.setState({ errors: err.response.data.errors}));
-
-    axios.post(`/profile/${this.state.userId}`, this.state, {
-      headers: { Authorization: `Bearer ${Auth.getToken()}`}
-    })
       .then(() => this.props.history.push('/artworks'))
       .catch(err => this.setState({ errors: err.response.data.errors}));
 
