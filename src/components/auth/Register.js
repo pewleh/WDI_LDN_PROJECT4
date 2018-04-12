@@ -46,7 +46,7 @@ class Register extends React.Component {
             <div className="field">
               <label htmlFor="image">Profile Picture</label>
               <input className="input"
-                placeholder="image"
+                placeholder="Use the http link (copy image address)"
                 name="image"
                 onChange={this.handleChange}
                 // value="http://2.bp.blogspot.com/-Z-VdrdfcL7E/UBwzgRNGUqI/AAAAAAACWwA/ExJ8dZdMmu8/s1600/995526-088.jpg"
