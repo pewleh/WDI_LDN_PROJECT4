@@ -7,6 +7,7 @@ import Navbar from './components/common/Navbar';
 import FlashMessages from './components/common/FlashMessages';
 import ProtectedRoute from './components/common/ProtectedRoute';
 import NotFound from './components/common/NotFound';
+import Home from './components/common/Home';
 
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
@@ -54,6 +55,7 @@ class App extends React.Component {
             <ProtectedRoute path="/challenges/submit" component={ChallengesSubmit} />
             <Route path="/artworks/:id" component={GalleryShow} />
             <Route path="/challenges" component={ChallengesIndex} />
+            <Route path="/" component={Home} />
             <Route path="/artworks" component={GalleryIndex} />
             <Route path="/register" render={props => <Register {...props} setUserId={this.setUserId} />} />
             <Route path="/login" render={props => <Login {...props} setUserId={this.setUserId} />} />
