@@ -35,6 +35,7 @@ class Login extends React.Component {
                 placeholder="email"
                 name="email"
                 onChange={this.handleChange}
+
               />
             </div>
             <div className="field">
@@ -45,6 +46,7 @@ class Login extends React.Component {
                 placeholder="Password"
                 name="password"
                 onChange={this.handleChange}
+
               />
             </div>
             <button className="button">Submit</button>
