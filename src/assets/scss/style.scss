@@ -196,7 +196,21 @@
   font-family: 'Fredericka the Great', cursive;
   font-size: 95%;
 }
+.error-container{
+  margin-top: -80vh;
+  text-align: center;
 
+  .error-title{
+    font-size: 300%;
+  }
+  .error-subtitle{
+    font-size: 130%;
+  }
+  .taxi{
+    width: 40vw;
+  }
+
+}
 }
 
 
