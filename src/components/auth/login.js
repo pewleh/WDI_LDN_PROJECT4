@@ -6,7 +6,6 @@ import Flash from '../lib/Flash';
 
 class Login extends React.Component {
 
-
   state = {}
 
   handleChange = ({ target: { name, value }  }) => {
@@ -21,7 +20,7 @@ class Login extends React.Component {
         Auth.setToken(res.data.token);
       })
       .then(() => Flash.setMessages('success', 'Welcome back!'))
-      .then(() => this.props.history.push('/challenge'));
+      .then(() => this.props.history.push('/challenges'));
   }
 
   render() {

@@ -5,6 +5,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Navbar from './components/common/Navbar';
 import FlashMessages from './components/common/FlashMessages';
+import ProtectedRoute from './components/common/ProtectedRoute';
+import NotFound from './components/common/NotFound';
 
 import Register from './components/auth/Register';
 import Login from './components/auth/Login';
@@ -19,6 +21,7 @@ import Help from './components/info/Help';
 import Profile from './components/info/User';
 
 import Auth from './components/lib/Auth';
+
 
 import './assets/scss/style.scss';
 
@@ -47,8 +50,8 @@ class App extends React.Component {
           <FlashMessages />
 
           <Switch>
-            <Route path="/artworks/:id/edit" component={GalleryEdit} />
-            <Route path="/challenges/submit" component={ChallengesSubmit} />
+            <ProtectedRoute path="/artworks/:id/edit" component={GalleryEdit} />
+            <ProtectedRoute path="/challenges/submit" component={ChallengesSubmit} />
             <Route path="/artworks/:id" component={GalleryShow} />
             <Route path="/challenges" component={ChallengesIndex} />
             <Route path="/artworks" component={GalleryIndex} />
@@ -56,6 +59,7 @@ class App extends React.Component {
             <Route path="/login" render={props => <Login {...props} setUserId={this.setUserId} />} />
             <Route path="/help" component={Help} />
             <Route path="/profile/:id" component={Profile} />
+            <Route component={NotFound} />
           </Switch>
         </main>
       </BrowserRouter>

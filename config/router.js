@@ -14,8 +14,8 @@ router.route('/artworks')
 
 router.route('/artworks/:id')
   .get(artworks.show)
-  .put( artworks.update)
-  .delete(artworks.delete);
+  .put(secureRoute, artworks.update)
+  .delete(secureRoute, artworks.delete);
 
 router.route('/challenges')
   .get(challenges.index);

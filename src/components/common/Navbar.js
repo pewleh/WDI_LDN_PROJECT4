@@ -16,7 +16,7 @@ class Navbar extends React.Component {
   handleLogout = () => {
     Auth.logout();
 
-    this.props.history.push('/');
+    this.props.history.push('/challenges');
   }
 
   componentWillUpdate() {
@@ -29,7 +29,7 @@ class Navbar extends React.Component {
       <nav className="navbar">
         <div className="navbar-brand">
           <Link className="navbar-item" to="/challenges">
-            LOGO
+            <h1 className="main-title">SketchBook</h1>
           </Link>
           <div
             className={`navbar-burger ${this.state.navIsOpen ? 'is-active' : ''}`}

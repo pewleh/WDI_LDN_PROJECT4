@@ -64,7 +64,7 @@ handleDelete = () =>{
                   <button className="button" onClick={this.toggleDeletePressed}>No</button>
                 </div>
               ) : (
-                <div>
+                <div modbutton>
                   <Link className="edit-button" to={`/artworks/${this.props.match.params.id}/edit`}>Edit</Link>
                   <button className="delete-button" onClick={this.toggleDeletePressed}>Delete</button>
                 </div>
