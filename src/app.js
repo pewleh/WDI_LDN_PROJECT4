@@ -56,10 +56,10 @@ class App extends React.Component {
             <Route path="/artworks/:id" component={GalleryShow} />
             <Route path="/profile/:id" component={Profile} />
             <Route path="/challenges" component={ChallengesIndex} />
-            <Route path="/register" render={props => <Register {...props} setUserId={this.setUserId} />} />
-            <Route path="/login" render={props => <Login {...props} setUserId={this.setUserId} />} />
             <Route path="/artworks" component={GalleryIndex} />
             <Route path="/help" component={Help} />
+            <Route path="/register" render={props => <Register {...props} setUserId={this.setUserId} />} />
+            <Route path="/login" render={props => <Login {...props} setUserId={this.setUserId} />} />
             <Route exact path="/" component={Home} />
             <Route component={NotFound} />
           </Switch>
