@@ -77,7 +77,7 @@ handleDelete = () =>{
                   <img className="artwork-medium" key={i} src={`/assets/images/${medium}.svg`} />
                 )}
               </div>
-              <p>{this.state.artwork.description}</p>
+              <p className="show-description">{this.state.artwork.description}</p>
               <Counter artwork={this.state.artwork} like={this.like} />
             </div>
           </section>
