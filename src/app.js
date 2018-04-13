@@ -60,8 +60,8 @@ class App extends React.Component {
             <Route path="/login" render={props => <Login {...props} setUserId={this.setUserId} />} />
             <Route path="/artworks" component={GalleryIndex} />
             <Route path="/help" component={Help} />
+            <Route exact path="/" component={Home} />
             <Route component={NotFound} />
-            <Route path="/" component={Home} />
           </Switch>
         </main>
       </BrowserRouter>
