@@ -36,13 +36,13 @@ describe('POST /register', () => {
       });
   });
 
-  it('should return a response of 500 if the passwords don\'t match', done => {
+  it('should return a response of 422 if the passwords don\'t match', done => {
     const incorrectData = Object.assign({}, userData, { password: 'incorrect' });
     api
       .post('/api/register')
       .send(incorrectData)
       .end((err, res) => {
-        expect(res.status).to.eq(500);
+        expect(res.status).to.eq(422);
         done();
       });
   });

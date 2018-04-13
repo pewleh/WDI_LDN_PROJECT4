@@ -51,17 +51,17 @@ class App extends React.Component {
           <FlashMessages />
 
           <Switch>
-            {/* <Route path="/" component={Home} /> */}
             <ProtectedRoute path="/artworks/:id/edit" component={GalleryEdit} />
             <ProtectedRoute path="/challenges/submit" component={ChallengesSubmit} />
             <Route path="/artworks/:id" component={GalleryShow} />
+            <Route path="/profile/:id" component={Profile} />
             <Route path="/challenges" component={ChallengesIndex} />
-            <Route path="/artworks" component={GalleryIndex} />
             <Route path="/register" render={props => <Register {...props} setUserId={this.setUserId} />} />
             <Route path="/login" render={props => <Login {...props} setUserId={this.setUserId} />} />
+            <Route path="/artworks" component={GalleryIndex} />
             <Route path="/help" component={Help} />
-            <Route path="/profile/:id" component={Profile} />
             <Route component={NotFound} />
+            <Route path="/" component={Home} />
           </Switch>
         </main>
       </BrowserRouter>
