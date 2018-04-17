@@ -1,5 +1,19 @@
 import React from 'react';
 
+const media = {
+  'acrylic': 'Acrylics',
+  'charcoal': 'Charcoal',
+  'chalk': 'Chalk',
+  'digital': 'Digital',
+  'ink': 'Ink',
+  'mixed-media': 'Mixed Media',
+  'oil': 'Oil',
+  'pencil': 'Pencil',
+  'pastel': 'Pastel',
+  'watercolour': 'Watercolour',
+  'spray-paint': 'Spray Paint'
+};
+
 const Form = ({handleSubmit, handleChange, handleMediaSelect, data}) => {
   return (
     <form onSubmit={handleSubmit}>
@@ -43,17 +57,9 @@ const Form = ({handleSubmit, handleChange, handleMediaSelect, data}) => {
             <div className="select">
               <select value={data.media[0]} name="media" onChange={(e) => handleMediaSelect(e.target.value, 0)}>
                 <option disabled value="">Please choose</option>
-                <option value="acrylic">Acrylics</option>
-                <option value="charcoal">Charcoal</option>
-                <option value="chalk">Chalk</option>
-                <option value="digital">Digital</option>
-                <option value="ink">Ink</option>
-                <option value="mixed-media">Mixed Media</option>
-                <option value="oil">Oils</option>
-                <option value="pencil">Pencil</option>
-                <option value="pastel">Pastel</option>
-                <option value="watercolour">Watercolour</option>
-                <option value="spray-paint">Spray Paint</option>
+                {Object.keys(media).map(medium =>
+                  <option key={medium} value={medium}>{media[medium]}</option>
+                )}
               </select>
             </div>
           </div>
@@ -66,17 +72,9 @@ const Form = ({handleSubmit, handleChange, handleMediaSelect, data}) => {
               <select value={data.media[1]} name="media" onChange={(e) => handleMediaSelect(e.target.value, 1)}>
                 <option disabled value="">Please choose</option>
                 <option value="none">None</option>
-                <option value="acrylic">Acrylics</option>
-                <option value="charcoal">Charcoal</option>
-                <option value="chalk">Chalk</option>
-                <option value="digital">Digital</option>
-                <option value="ink">Ink</option>
-                <option value="mixed-media">Mixed Media</option>
-                <option value="oil">Oils</option>
-                <option value="pencil">Pencil</option>
-                <option value="pastel">Pastel</option>
-                <option value="watercolour">Watercolour</option>
-                <option value="spray-paint">Spray Paint</option>
+                {Object.keys(media).map(medium =>
+                  <option key={medium} value={medium}>{media[medium]}</option>
+                )}
               </select>
             </div>
           </div>
@@ -90,17 +88,9 @@ const Form = ({handleSubmit, handleChange, handleMediaSelect, data}) => {
               <select value={data.media[2]} name="media" onChange={(e) => handleMediaSelect(e.target.value, 2)}>
                 <option disabled value="">Please choose</option>
                 <option value="none">None</option>
-                <option value="acrylic">Acrylics</option>
-                <option value="charcoal">Charcoal</option>
-                <option value="chalk">Chalk</option>
-                <option value="digital">Digital</option>
-                <option value="ink">Ink</option>
-                <option value="mixed-media">Mixed Media</option>
-                <option value="oil">Oils</option>
-                <option value="pencil">Pencil</option>
-                <option value="pastel">Pastel</option>
-                <option value="watercolour">Watercolour</option>
-                <option value="spray-paint">Spray Paint</option>
+                {Object.keys(media).map(medium =>
+                  <option key={medium} value={medium}>{media[medium]}</option>
+                )}
               </select>
             </div>
           </div>
