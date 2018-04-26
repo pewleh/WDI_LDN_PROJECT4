@@ -37,22 +37,58 @@
       width: 20vw;
       position: absolute;
       margin-top: 19vh;
+      @media(max-width: 1999px){
+        margin-top: 30vh;
+        width: 12vw;
+        margin-left: -5vw;
+        font-size: 15px;
+      }
+      @media(max-width: 899px){
+        margin-top: 42vh;
+        margin-left: 7vw;
+      }
+      @media(max-width: 599px){
+        margin-top: 34vh;
+        margin-left: 7vw;
+      }
     }
       .challenge-title{
         font-size: 3.5vw;
         padding-bottom: 6vh;
-
+        @media(max-width: 899px){
+          margin-left: 8.5vw;
+        }
       }
       .updatable-data{
         text-align: center;
       }
       .description-paragraph{
         font-family: 'Nanum Brush Script', cursive;
-        font-size: 180%
+        font-size: 180%;
+        @media(max-width: 1999px){
+          margin-top: 6vh;
+        }
+        @media(max-width: 899px){
+          margin-top: 10vh;
+        }
+        @media(max-width: 599px){
+          margin-top: 15vh;
+        }
       }
+
       a.button{
         margin-left: 80vw;
         margin-top: -30vh;
+        @media(max-width: 1999px){
+          margin-top: -32.5vh;
+          margin-left:72vw;
+        }
+        @media(max-width: 899px){
+          margin-top: -20.5vh;
+        }
+        @media(max-width: 599px){
+          margin-top: -30.5vh;
+        }
       }
   }
 
@@ -76,16 +112,29 @@
   display: inline-flex;
   .field{
     margin-left: 6vw;
+    @media(max-width: 899px){
+      width: 5.5vw;
+    }
+  }
+  @media(max-width: 899px){
+    max-width: 550px;
+    margin-left: 5vw;
   }
 }
 button.button{
   background-color:#f1eded;
   margin-left: 24.5vw;
   margin-top: 2%;
+
 }
 
 
 //artwork index
+.artworks-container{
+  .main{
+  height: 100%;
+}
+}
 .card .card-content {
     padding: 1.5rem;
     max-width: 50vw;
@@ -101,13 +150,25 @@ button.button{
   position: absolute;
   margin-top: 25vh;
   margin-left: 3vw;
+  @media(max-width: 899px){
+    margin-left: 10vw;
+    margin-top: 2vh;
+  }
+  @media(max-width: 599px){
+    margin-left: 28vw;
+    margin-top: -2vh;
+  }
 }
 .submitted-subtitle{
   font-size: 150%;
   margin-top: 32vh;
   position: absolute;
   margin-left: 20vw;
+  @media(max-width: 1199px){
+    margin-top: 34vh;
+  }
 }
+
 .image-container{
   text-align: center;
 
@@ -120,45 +181,112 @@ button.button{
     padding: 15px;
     border: 1.5px solid #d0cece;
     border-radius: 5%;
+    @media(max-width: 899px){
+      margin-left: 50vw;
+      margin-top: -10vh;
+    }
+    @media(max-width: 599px){
+      margin-left:10vw;
+      margin-top: 10vh;
+    }
   }
 
   .show-description{
     padding-top: 5vh;
     margin-left: 5vw;
+    @media(max-width: 1199px){
+      margin-left: 58vh;
+      width: 20vw;
+    }
+    @media(max-width: 899px){
+      position:absolute;
+      margin-top: -18vh;
+      margin-left: 18vw;
+    }
+    @media(max-width: 599px){
+      display: none
+    }
   }
 }
+
 .media-block{
   width: 5vw;
   float:right;
   margin-right: 15vw;
   margin-top: 20vh;
-  text-align: center
+  text-align: center;
+  @media(max-width: 1199px){
+    display: inline-flex;
+    margin-top: 50vh;
+    margin-left: -65vw;
+    position: absolute;
+  }
+  @media(max-width: 899px){
+    display: inline-flex;
+    margin-top: 40vh;
+    z-index: 1;
+    margin-left: -65vw;
+    position: absolute;
+  }
+  @media(max-width: 599px){
+    display: inline-flex;
+    margin-top: 40vh;
+    z-index: 1;
+    margin-left: -32vw;
+    position: absolute;
+    padding: 10px;
+  }
 }
 
 .artwork-medium{
   max-width: 6vw;
   display: block;
   padding: 15px;
+  height: 10vh;
+  @media(max-width: 899px){
+    max-width: 8vw;
+  }
 }
 
 .likes{
   font-size: 200%;
   margin-left: 5vw;
+  @media(max-width: 1199px){
+    margin-left: 45vw;
+  }
+  @media(max-width: 899px){
+    margin-left: 53vw;
+    margin-top: 2vh;
+  }
+  @media(max-width: 599px){
+    margin-left: 10vw;
+    margin-top: 10vh;
+    padding: 10px;
+    margin: 5px;
+  }
 }
 
-.btn{
+button.btn{
   margin-left: 5vw;
   padding: 15px;
   background-color:#e1dede;
   border-radius: 10%;
   font-family: 'Fredericka the Great', cursive;
   font-size: 95%;
-
+  @media(max-width: 1199px){
+    margin-left: 45vw;
+  }
+  @media(max-width: 899px){
+    margin-left: 53vw;
+    margin-top: 1vh;
+  }
+  @media(max-width: 599px){
+    margin-left: 8vw;
+  }
 }
 }
 
 //showpage buttons
-
 div.mod-button{
   position: absolute;
   margin-top: 44vh;
@@ -177,6 +305,16 @@ div.mod-button{
     border-radius: 15%;
     background-color: #e1dede;
     margin-left: 2vw;
+  }
+  @media(max-width: 899px){
+    margin-left: 20vw;
+    margin-top: 28vh;
+    position: absolute;
+  }
+  @media(max-width: 599px){
+    margin-left: 80vw;
+    margin-top: 30vh;
+    position: absolute;
   }
 }
 
@@ -208,6 +346,13 @@ div.mod-button{
     margin-top: 30vh;
     font-size: 450%;
     padding: 10px;
+    @media(max-width: 599px){
+      float:left;
+      font-size: 200%;
+      margin-left: 70vw;
+      position: absolute;
+      margin-top: -40vh;
+    }
   }
 }
 
@@ -216,7 +361,11 @@ div.mod-button{
   margin-top: -10vh;
   float: right;
   margin-right: 12vw;
-
+  @media(max-width: 599px){
+    margin-left: -5vw;
+    display: block;
+    margin-top: -20vh;
+  }
 }
 
 .inner-submission-container{
