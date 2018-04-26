@@ -2,102 +2,100 @@
   background-color: #efefef;
   font-family: 'Fredericka the Great', cursive;
 
-  .container{
-    height: 100vh;
+  //navbar
+  .navbar-item{
+    font-size: 140%;
+  }
 
 
-
+  //FORMS
   form, label, .field, .control{
     background-color: white;
   }
-  .login-box{
-    border: 1px solid #d0cece;
-    width:50vw;
-    padding: 5%;
-    margin-left: 23%;
-    margin-top: -83vh;
-    background-color: white;
-
-    .login-title{
-      background-color: white;
-      text-align: center;
-      font-size: 3vw;
-      margin-top: -3vh;
-    }
-    button.button{
-      background-color:#f1eded;
-      margin-left: 44%;
-      margin-top: 5%;
-      margin-bottom: -5%;
-    }
-  }
-  .register-box, .challengeSubmit-container{
-    border: 1px solid #d0cece;
-    width:65vw;
-    padding: 5%;
-    margin-left: 16.5%;
-    margin-top: -90vh;
-    background-color: white;
-
-    .description-input{
-      height: 10vh;
-      margin-bottom: 2vh;
-    }
-
-    .register-title{
-      background-color: white;
-      font-size: 3vw;
-      text-align: center;
-      margin-top: -4vh;
-    }
-  }
-  .medium-controls{
-    background-color: white;
-    display: inline-flex;
-    .field{
-      margin-left: 6vw;
-    }
-  }
-  button.button{
-    background-color:#f1eded;
-    margin-left: 24.5vw;
-    margin-top: 2%;
-  }
-}
-
-.challengeIndex-container, .profile-container, .artworks-container{
-  margin-top: -90vh;
 
 
-.countdown-container{
-  width: 20vw;
-  position: absolute;
-  margin-top: 19vh;
-}
-  .challenge-title{
-    font-size: 3.5vw;
-    padding-bottom: 6vh;
-
-  }
-  .updatable-data{
+  //home page
+  .central-container{
+    height: 85vh;
     text-align: center;
+
+    .central-title{
+      font-size: 300%;
+      margin-top: 10vh;
+    }
+
+    .central-subtitle{
+      font-size: 130%;
+    }
   }
-  .description-paragraph{
-    font-family: 'Nanum Brush Script', cursive;
-    font-size: 180%
+
+  //Challenge page
+  .challengeIndex-container{
+    height: 100vh;
+
+    .countdown-container{
+      width: 20vw;
+      position: absolute;
+      margin-top: 19vh;
+    }
+      .challenge-title{
+        font-size: 3.5vw;
+        padding-bottom: 6vh;
+
+      }
+      .updatable-data{
+        text-align: center;
+      }
+      .description-paragraph{
+        font-family: 'Nanum Brush Script', cursive;
+        font-size: 180%
+      }
+      a.button{
+        margin-left: 80vw;
+        margin-top: -30vh;
+      }
   }
-  a.button{
-    margin-left: 80vw;
-    margin-top: -30vh;
-  }
+
+//challenge submit
+
+.register-box, .challengeSubmit-container{
+  border: 1px solid #d0cece;
+  width:65vw;
+  padding: 5%;
+  margin-left: 16.5%;
+  background-color: white;
+  margin-top: 10vh;
+}
+.description-input{
+  height: 10vh;
+  margin-bottom: 2vh;
 }
 
-.help-container{      //refactor the containers at a more apporpriate time.
-  margin-top: -90vh;
+.medium-controls{
+  background-color: white;
+  display: inline-flex;
+  .field{
+    margin-left: 6vw;
+  }
 }
+button.button{
+  background-color:#f1eded;
+  margin-left: 24.5vw;
+  margin-top: 2%;
+}
+
+
+//artwork index
+.card .card-content {
+    padding: 1.5rem;
+    max-width: 50vw;
+}
+
 
 //SHOW ARTWORK
 .artworks-container{
+  margin-top: 10vh;
+  height: 150vh;
 .submitted-title{
   font-size: 300%;
   position: absolute;
@@ -125,7 +123,8 @@
   }
 
   .show-description{
-    padding-top: 15vh;
+    padding-top: 5vh;
+    margin-left: 5vw;
   }
 }
 .media-block{
@@ -142,58 +141,11 @@
   padding: 15px;
 }
 
-}
-
-.profile-container{
-
-  .personal-info{
-    padding-bottom: 30px;
-  }
-  .profile-image{
-    max-width:24vw;
-    border-radius: 5%;
-    padding: 20px;
-    border: 1.5px solid #d0cece;
-    margin-left: 6vw;
-    margin-top: 10vh;
-
-}
-  .profile-title{
-    float: right;
-    margin-right: 25vw;
-    margin-top: 20vh;
-    font-size: 450%;
-    padding: 10px;
-  }
-}
-.profile-medium{
-  max-width: 8vw;
-  float:right;
-  padding: 20px;
-  margin-right: 10vw;
-  margin-top: -13.5vh;
-}
-.inner-submission-container{
- width: 70vw;
- text-align: center;
- border-top: 1.5px solid #d0cece;
- margin-left: 10vw;
- margin-top: 15vh;
- padding: 15px;
-
- .inner-submission-title{
-   padding: 40px;
- }
-}
-
-.navbar-item{
-  font-size: 140%;
-}
-
 .likes{
   font-size: 200%;
   margin-left: 5vw;
 }
+
 .btn{
   margin-left: 5vw;
   padding: 15px;
@@ -201,34 +153,12 @@
   border-radius: 10%;
   font-family: 'Fredericka the Great', cursive;
   font-size: 95%;
-}
-.central-container{
-  margin-top: -80vh;
-  text-align: center;
-
-  .central-title{
-    font-size: 300%;
-  }
-  .central-subtitle{
-    font-size: 130%;
-  }
-  .taxi{
-    width: 40vw;
-  }
 
 }
 }
 
+//showpage buttons
 
-.notification{
-  font-family: monospace;
-}
-div.notification.is-danger{
-  background-color: #728cab;
-}
-div.notification.is-success{
-  background-color: #5d986f;
-}
 div.mod-button{
   position: absolute;
   margin-top: 44vh;
@@ -250,16 +180,133 @@ div.mod-button{
   }
 }
 
-.main-title{
-  font-size: 180%;
+
+//profile
+
+.profile-container{
+
+.upper-profile-container{
+  display: inline flex;
 }
+  .personal-info{
+    padding-bottom: 30px;
+  }
+  .profile-image{
+    max-width:24vw;
+    border-radius: 5%;
+    padding: 20px;
+    border: 1.5px solid #d0cece;
+    margin-left: 6vw;
+    margin-top: 10vh;
+    min-width: 300px;
+    min-height: 300px;
+
+}
+  .profile-title{
+    float: right;
+    margin-right: 25vw;
+    margin-top: 30vh;
+    font-size: 450%;
+    padding: 10px;
+  }
+}
+
+.profile-medium{
+  max-width: 6vw;
+  margin-top: -10vh;
+  float: right;
+  margin-right: 12vw;
+
+}
+
+.inner-submission-container{
+  height:100%;
+   width: 100vw;
+   text-align: center;
+   border-top: 1.5px solid #d0cece;
+   margin-top: 15vh;
+
+
+ .inner-submission-title{
+   padding: 40px;
+ }
+}
+
+
+//help page
 .help-container{
   text-align: center;
   padding: 30px;
-  padding-bottom: 20vh;
+  padding-bottom: 5vh;
 .help-image{
   max-width: 40vw;
   border: 1.5px solid #d0cece;
   padding: 10px;
 }
+}
+
+
+//login
+.login-container{
+  height: 80vh;
+  .login-box{
+    margin-top: 10vh;
+    border: 1px solid #d0cece;
+    width:50vw;
+    padding: 5%;
+    margin-left: 23%;
+    background-color: white;
+
+    .login-title{
+      background-color: white;
+      text-align: center;
+      font-size: 3vw;
+      margin-top: -3vh;
+    }
+    button.button{
+      background-color:#f1eded;
+      margin-left: 44%;
+      margin-top: 5%;
+      margin-bottom: -5%;
+    }
+  }
+
+}
+//Register page ->
+.register-container{
+  height: 100vh;
+.register-title{
+  background-color: white;
+  font-size: 3vw;
+  text-align: center;
+  margin-top: -4vh;
+}
+}
+
+
+//flash messages!
+.notification{
+  font-family: monospace;
+}
+div.notification.is-danger{
+  background-color: #728cab;
+}
+div.notification.is-success{
+  background-color: #5d986f;
+}
+
+
+//error page
+.central-container{
+  text-align: center;
+
+  .taxi{
+    width: 40vw;
+  }
+
+}
+.main-title{
+  font-size: 180%;
+}
+
 }

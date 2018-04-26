@@ -39,13 +39,15 @@ class ChallengeSubmit extends React.Component {
   render() {
     return (
       <div className="container">
-        <section className="challengeSubmit-container">
-          <Form
-            handleChange={this.handleChange}
-            handleMediaSelect={this.handleMediaSelect}
-            handleSubmit={this.handleSubmit}
-            data={this.state} />
-        </section>
+        <div className="challengeIndex-container">
+          <section className="challengeSubmit-container">
+            <Form
+              handleChange={this.handleChange}
+              handleMediaSelect={this.handleMediaSelect}
+              handleSubmit={this.handleSubmit}
+              data={this.state} />
+          </section>
+        </div>
       </div>
     );
   }

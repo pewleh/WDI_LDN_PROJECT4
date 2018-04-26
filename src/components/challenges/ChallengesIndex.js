@@ -28,10 +28,8 @@ class ChallengesIndex extends React.Component{
 
           <div className="updatable-data">
             <div>
-              <div className="countdown-container">
-                {/* Add a countdown here -> post mvp(bit of a headache in React) */}
-                <p>Ends on: <br />{this.state.challenges[0].endTime}</p>
-              </div>
+              {/* Add a countdown here -> post mvp */}
+              <p className="countdown-container">Ends on: <br />{this.state.challenges[0].endTime}</p>
               <img src={this.state.challenges[0].image} />
               <br />
               <br />

@@ -26,14 +26,16 @@ class Profile extends React.Component{
     return(
       <div className="container">
         <section className="profile-container">
-          <div className="personal-info">
-            <img className="profile-image" src={this.state.user.image} />
-            <h1 className="profile-title">{this.state.user.username}</h1>
-            {/* <p>ranking</p>    dont uncheck NOT MVP*/}
+          <div className="upper-profile-container">
+            <div className="personal-info">
+              <img className="profile-image" src={this.state.user.image} />
+              <h1 className="profile-title">{this.state.user.username}</h1>
+              {/* <p>ranking</p>    dont uncheck NOT MVP*/}
+            </div>
+            {this.state.user.media && this.state.user.media.map((medium, i) =>
+              <img className="profile-medium" key={i} src={`/assets/images/${medium}.svg`} />
+            )}
           </div>
-          {this.state.user.media && this.state.user.media.map((medium, i) =>
-            <img className="profile-medium" key={i} src={`/assets/images/${medium}.svg`} />
-          )}
           <div className="submission-container">
 
             <div className="inner-submission-container">
