@@ -37,7 +37,7 @@
       width: 20vw;
       position: absolute;
       margin-top: 19vh;
-      @media(max-width: 1999px){
+      @media(max-width: 1199px){
         margin-top: 30vh;
         width: 12vw;
         margin-left: -5vw;
@@ -65,7 +65,7 @@
       .description-paragraph{
         font-family: 'Nanum Brush Script', cursive;
         font-size: 180%;
-        @media(max-width: 1999px){
+        @media(max-width: 1199px){
           margin-top: 6vh;
         }
         @media(max-width: 899px){
@@ -79,7 +79,7 @@
       a.button{
         margin-left: 80vw;
         margin-top: -30vh;
-        @media(max-width: 1999px){
+        @media(max-width: 1199px){
           margin-top: -32.5vh;
           margin-left:72vw;
         }
