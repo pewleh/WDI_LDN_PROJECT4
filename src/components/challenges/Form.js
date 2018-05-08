@@ -55,7 +55,8 @@ const Form = ({handleSubmit, handleChange, handleMediaSelect, data}) => {
           <label htmlFor="name">First Medium</label>
           <div className="control">
             <div className="select">
-              <select value={data.media[0]} name="media" onChange={(e) => handleMediaSelect(e.target.value, 0)}>
+              <select value={data.media[0]} name="media" onChange={(e) =>
+                handleMediaSelect(e.target.value, 0)}>
                 <option disabled value="">Please choose</option>
                 {Object.keys(media).map(medium =>
                   <option key={medium} value={medium}>{media[medium]}</option>
@@ -69,7 +70,8 @@ const Form = ({handleSubmit, handleChange, handleMediaSelect, data}) => {
           <label htmlFor="name">Second Medium</label>
           <div className="control">
             <div className="select">
-              <select value={data.media[1]} name="media" onChange={(e) => handleMediaSelect(e.target.value, 1)}>
+              <select value={data.media[1]} name="media" onChange={(e) =>
+                handleMediaSelect(e.target.value, 1)}>
                 <option disabled value="">Please choose</option>
                 <option value="none">None</option>
                 {Object.keys(media).map(medium =>
@@ -85,7 +87,8 @@ const Form = ({handleSubmit, handleChange, handleMediaSelect, data}) => {
           <label htmlFor="name">Third Medium</label>
           <div className="control">
             <div className="select">
-              <select value={data.media[2]} name="media" onChange={(e) => handleMediaSelect(e.target.value, 2)}>
+              <select value={data.media[2]} name="media" onChange={(e) =>
+                handleMediaSelect(e.target.value, 2)}>
                 <option disabled value="">Please choose</option>
                 <option value="none">None</option>
                 {Object.keys(media).map(medium =>

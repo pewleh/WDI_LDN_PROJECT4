@@ -24,13 +24,17 @@ _________________
 Challenges are set with a start and end date allowing for 7 days of user submissions. Each challenge description includes the rules of the week.
 <br><br><br>
 <p align="center"><img src="src/assets/images/2.png" width="700"></p>
+<p align="center"><img src="src/assets/images/ss1.png" width="700"></p>
+<p align="center"><img src="src/assets/images/ss2.png" width="700"></p>
 On submission, users can choose up to three mediums they used to create their work. These will be presented as icons on their artwork's show page.
 <br><br><br>
 <p align="center"><img src="src/assets/images/5.png" width="700"></p>
+<p align="center"><img src="src/assets/images/ss3.png" width="700"></p>
 Here, any user can like a piece of artwork to show support. Each user is only able to like an artwork once.
 <br><br><br>
 <p align="center"><img src="src/assets/images/4.png" width="700"></p>
-SketchBook uses and secure routes in order to prevent users from uploading artwork without an account.
+<p align="center"><img src="src/assets/images/ss4.png" width="700"></p>
+SketchBook uses secure routes in order to prevent users from uploading artwork without an account.
 
 _________________
 ###### MORE TIME
