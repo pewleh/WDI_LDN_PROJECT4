@@ -32,31 +32,26 @@
   //Challenge page
   .challengeIndex-container{
     height: 100vh;
+    @media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
+      height:60vh;
+    }
+
 
     .countdown-container{
       width: 20vw;
       position: absolute;
       margin-top: 19vh;
-      @media(max-width: 1199px){
-        margin-top: 30vh;
-        width: 12vw;
-        margin-left: -5vw;
-        font-size: 15px;
-      }
-      @media(max-width: 899px){
-        margin-top: 42vh;
-        margin-left: 7vw;
-      }
-      @media(max-width: 599px){
-        margin-top: 34vh;
-        margin-left: 7vw;
+      @media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
+        margin-top: -5vh;
+        margin-left: 11vw;
       }
     }
       .challenge-title{
         font-size: 3.5vw;
         padding-bottom: 6vh;
-        @media(max-width: 899px){
-          margin-left: 8.5vw;
+        @media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
+          margin-top: 2vh;
+          margin-left: 6vw;
         }
       }
       .updatable-data{
@@ -65,29 +60,23 @@
       .description-paragraph{
         font-family: 'Nanum Brush Script', cursive;
         font-size: 180%;
-        @media(max-width: 1199px){
-          margin-top: 6vh;
-        }
-        @media(max-width: 899px){
-          margin-top: 10vh;
-        }
-        @media(max-width: 599px){
-          margin-top: 15vh;
+        @media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
+          margin-top: 2vh;
+          width: 90vw;
+          margin-left: 5vw;
         }
       }
-
       a.button{
         margin-left: 80vw;
         margin-top: -30vh;
-        @media(max-width: 1199px){
-          margin-top: -32.5vh;
-          margin-left:72vw;
+        @media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
+          margin-top: 1.5vh;
+          margin-left: 46vw;
         }
-        @media(max-width: 899px){
-          margin-top: -20.5vh;
-        }
-        @media(max-width: 599px){
-          margin-top: -30.5vh;
+      }
+      img{
+        @media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
+          margin-top: -2vh;
         }
       }
   }
@@ -101,6 +90,24 @@
   margin-left: 16.5%;
   background-color: white;
   margin-top: 10vh;
+
+    @media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
+      width: 79vw;
+    margin-left: 11vw;
+    height: 36vh;
+    margin-top: 8vh;
+    }
+    form{
+      @media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
+      margin-top: 2vh;
+      padding: 10px;
+    }
+    .field{
+      @media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
+        margin-bottom: 2.75rem;
+      }
+    }
+  }
 }
 .description-input{
   height: 10vh;
@@ -112,20 +119,20 @@
   display: inline-flex;
   .field{
     margin-left: 6vw;
-    @media(max-width: 899px){
-      width: 5.5vw;
+    @media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
+      margin-left: 4.5vw;
+      margin-top: -5vh;
     }
-  }
-  @media(max-width: 899px){
-    max-width: 550px;
-    margin-left: 5vw;
   }
 }
 button.button{
   background-color:#f1eded;
   margin-left: 24.5vw;
   margin-top: 2%;
-
+  @media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
+    margin-left: 27vw;
+    margin-top: -1vh;
+  }
 }
 
 
@@ -405,12 +412,24 @@ div.mod-button{
     padding: 5%;
     margin-left: 23%;
     background-color: white;
+    @media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
+      width: 66vw;
+      height: 20vh;
+      margin-left: 17.5vw;
+  }
 
     .login-title{
       background-color: white;
       text-align: center;
       font-size: 3vw;
       margin-top: -3vh;
+      @media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
+        font-size: 50px;
+        margin-top: -2vh;
+      }
+      form{
+          margin-top: 2.5vh;
+      }
     }
     button.button{
       background-color:#f1eded;
@@ -429,9 +448,22 @@ div.mod-button{
   font-size: 3vw;
   text-align: center;
   margin-top: -4vh;
+  @media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
+    margin-top: -2vh;
+    font-size: 54px;
 }
 }
-
+form{
+  @media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
+    margin-top: 1vh;
+}
+}
+button{
+  @media only screen and (min-device-width : 320px) and (max-device-width : 1024px) {
+    margin-left: 31vw;
+  }
+  }
+}
 
 //flash messages!
 .notification{
