@@ -32,9 +32,11 @@ class Profile extends React.Component{
               <h1 className="profile-title">{this.state.user.username}</h1>
               {/* <p>ranking</p>    dont uncheck NOT MVP*/}
             </div>
-            {this.state.user.media && this.state.user.media.map((medium, i) =>
-              <img className="profile-medium" key={i} src={`/assets/images/${medium}.svg`} />
-            )}
+            <div className="profile-medium-block">
+              {this.state.user.media && this.state.user.media.map((medium, i) =>
+                <img className="profile-medium" key={i} src={`/assets/images/${medium}.svg`} />
+              )}
+            </div>
           </div>
           <div className="submission-container">
 
