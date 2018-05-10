@@ -14,7 +14,7 @@ For this project I had 5 days to create a Mern stack app.
 SketchBook is a site built to re-invigorate artists passions for creating. Inspired by lack of inspiration.<br> Users are set weekly challenges and once authenticated, are able to submit their own artwork giving information on what materials they used and the motivation behind the work.
 
 
-##### [Visit the website](https://sketch-books.herokuapp.com/) for best *viewing* experience (the application is not yet designed for mobile).
+##### [Visit the website](https://sketch-books.herokuapp.com/) for best *viewing* experience.
 
 _________________
 
